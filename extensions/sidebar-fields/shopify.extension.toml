@@ -1,0 +1,113 @@
+# Learn more about configuring your checkout UI extension:
+# https://shopify.dev/api/checkout-extensions/checkout/configuration
+
+# The version of APIs your extension will receive. Learn more:
+# https://shopify.dev/docs/api/usage/versioning
+api_version = "2024-04"
+
+[[extensions]]
+name = "sidebar-fields"
+handle = "sidebar-fields"
+type = "ui_extension"
+
+
+# Controls where in Shopify your extension will be injected,
+# and the file that contains your extension’s source code. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/extension-targets-overview
+
+[[extensions.targeting]]
+module = "./src/Checkout.jsx"
+target = "purchase.checkout.block.render"
+
+[extensions.capabilities]
+# Gives your extension access to directly query Shopify’s storefront API.
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#api-access
+api_access = true
+
+# Gives your extension access to make external network calls, using the
+# JavaScript `fetch()` API. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#network-access
+# network_access = true
+
+# Loads metafields on checkout resources, including the cart,
+# products, customers, and more. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#metafields
+
+# [[extensions.metafields]]
+# namespace = "my_namespace"
+# key = "my_key"
+# [[extensions.metafields]]
+# namespace = "my_namespace"
+# key = "my_other_key"
+
+# Defines settings that will be collected from merchants installing
+# your extension. Learn more:
+# https://shopify.dev/docs/api/checkout-ui-extensions/unstable/configuration#settings-definition
+
+[extensions.settings]
+
+[[extensions.settings.fields]]
+key = "image"
+type = "single_line_text_field"
+name = "Card Image 1"
+
+[[extensions.settings.fields]]
+key = "title"
+type = "single_line_text_field"
+name = "Card Heading 1"
+
+[[extensions.settings.fields]]
+key = "content"
+type = "multi_line_text_field"
+name = "Card Info 1"
+
+[[extensions.settings.fields]]
+key = "image2"
+type = "single_line_text_field"
+name = "Card Image 2"
+
+[[extensions.settings.fields]]
+key = "title2"
+type = "single_line_text_field"
+name = "Card Heading 2"
+
+[[extensions.settings.fields]]
+key = "content2"
+type = "multi_line_text_field"
+name = "Card Info 2"
+
+[[extensions.settings.fields]]
+key = "image3"
+type = "single_line_text_field"
+name = "Card Image 3"
+
+[[extensions.settings.fields]]
+key = "title3"
+type = "single_line_text_field"
+name = "Card Heading 3"
+
+[[extensions.settings.fields]]
+key = "content3"
+type = "multi_line_text_field"
+name = "Card Info 3"
+
+[[extensions.settings.fields]]
+key = "image4"
+type = "single_line_text_field"
+name = "Card Image 4"
+
+[[extensions.settings.fields]]
+key = "title4"
+type = "single_line_text_field"
+name = "Card Heading 4"
+
+[[extensions.settings.fields]]
+key = "content4"
+type = "multi_line_text_field"
+name = "Card Info 4"
+
+[[extensions.settings.fields]]
+key = "post_text"
+type = "multi_line_text_field"
+name = "Post Text"
+description = "Post text"
